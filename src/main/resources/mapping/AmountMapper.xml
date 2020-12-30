@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yshyerp.receivables.mapper.AmountMapper" >
+  <resultMap id="BaseResultMap" type="com.yshyerp.receivables.entity.Amount" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="id" property="key" jdbcType="INTEGER" />
+    <result column="amountno" property="amountno" jdbcType="CHAR" />
+    <result column="date" property="date" jdbcType="DATE" />
+    <result column="customer" property="customer" jdbcType="CHAR" />
+    <result column="billid" property="billid" jdbcType="INTEGER" />
+    <result column="serviceid" property="serviceid" jdbcType="CHAR" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="remarks" property="remarks" jdbcType="CHAR" />
+    <result column="d" property="d" jdbcType="CHAR" />
+  </resultMap>
+  <insert id="addAmount">
+
+  </insert>
+  <update id="updateAmount">
+
+  </update>
+  <update id="deleteAmount">
+<foreach collection="list" separator="" item="val">
+  update amount set d='D' where id=#{val}
+</foreach>
+  </update>
+  <insert id="exec">
+    exec Sav_Receivables 0,'AM',#{amountno},#{cname},'',''
+  </insert>
+  <insert id="execwno">
+     EXEC w_no 'N',#{amountno},N'0',''
+  </insert>
+
+
+  <select id="getAmount" resultMap="BaseResultMap">
+
+  </select>
+
+</mapper>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yshyerp.receivables.mapper.vw_receivablesMapper" >
+  <resultMap id="BaseResultMap" type="com.yshyerp.receivables.entity.vw_receivables" >
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="BillID" property="billid" jdbcType="INTEGER" />
+    <result column="contract_i" property="contractI" jdbcType="CHAR" />
+    <result column="ReceivablesID" property="receivablesid" jdbcType="VARCHAR" />
+    <result column="no" property="no" jdbcType="CHAR" />
+    <result column="commodity" property="commodity" jdbcType="CHAR" />
+    <result column="ServiceID" property="serviceid" jdbcType="VARCHAR" />
+    <result column="customer" property="customer" jdbcType="CHAR" />
+    <result column="tank" property="tank" jdbcType="CHAR" />
+    <result column="OccurDate" property="occurdate" jdbcType="TIMESTAMP" />
+    <result column="Price" property="price" jdbcType="NUMERIC" />
+    <result column="Cent" property="cent" jdbcType="NUMERIC" />
+    <result column="TaxRate" property="taxrate" jdbcType="NUMERIC" />
+    <result column="Number" property="number" jdbcType="NUMERIC" />
+    <result column="total2" property="total2" jdbcType="NUMERIC" />
+    <result column="PailWeight" property="pailweight" jdbcType="NUMERIC" />
+    <result column="DeductMoney" property="deductmoney" jdbcType="NUMERIC" />
+    <result column="DeductReason" property="deductreason" jdbcType="VARCHAR" />
+    <result column="InvoiceNo" property="invoiceno" jdbcType="VARCHAR" />
+    <result column="InvoiceDate" property="invoicedate" jdbcType="TIMESTAMP" />
+    <result column="OperatorID" property="operatorid" jdbcType="VARCHAR" />
+    <result column="CreateDate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="Type" property="type" jdbcType="INTEGER" />
+    <result column="State" property="state" jdbcType="INTEGER" />
+    <result column="Remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="Name" property="name" jdbcType="VARCHAR" />
+    <result column="Unit" property="unit" jdbcType="CHAR" />
+    <result column="ChargeType" property="chargetype" jdbcType="INTEGER" />
+    <result column="c_name" property="cName" jdbcType="CHAR" />
+    <result column="amount" property="amount" jdbcType="NUMERIC" />
+  </resultMap>
+  <select id="getVwreceivables" resultMap="BaseResultMap"></select>
+  <select id="getVwreceivablesById" resultMap="BaseResultMap"></select>
+
+</mapper>
